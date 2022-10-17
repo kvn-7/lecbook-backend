@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "mappedBy": "subjects"
+    },
+    "name": {
+      "type": "string"
+    },
+    "fullform": {
+      "type": "string"
+    },
+    "sem": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sem.sem",
+      "inversedBy": "subject"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "subject"
+    }
+  }
+}

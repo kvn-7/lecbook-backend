@@ -1,0 +1,33 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.1.11",
+    "@strapi/plugin-users-permissions": "4.1.11",
+    "@strapi/provider-email-nodemailer": "^4.1.12",
+    "@strapi/strapi": "4.1.11",
+    "better-sqlite3": "7.4.6",
+    "paytm-pg-node-sdk": "^1.0.4",
+    "strapi-provider-email-sendgrid": "^3.6.10",
+    "strapi-stripe": "^2.1.4"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "325b9164-b53f-4ebb-9299-e0bf5020dde7"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

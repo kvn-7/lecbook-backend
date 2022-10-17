@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sems",
+  "info": {
+    "singularName": "sem",
+    "pluralName": "sems",
+    "displayName": "Sem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Semester": {
+      "type": "integer"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "sem"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "sem"
+    }
+  }
+}

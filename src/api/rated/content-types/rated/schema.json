@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rateds",
+  "info": {
+    "singularName": "rated",
+    "pluralName": "rateds",
+    "displayName": "rated"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "israted": {
+      "type": "boolean"
+    }
+  }
+}

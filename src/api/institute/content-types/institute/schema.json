@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "institutes",
+  "info": {
+    "singularName": "institute",
+    "pluralName": "institutes",
+    "displayName": "Institute"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "fullform": {
+      "type": "string"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "institutes"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "institute"
+    }
+  }
+}

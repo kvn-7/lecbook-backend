@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "subtitle": {
+      "type": "richtext",
+      "pluginOptions": {}
+    },
+    "publishdate": {
+      "type": "date",
+      "pluginOptions": {}
+    },
+    "price": {
+      "type": "decimal",
+      "pluginOptions": {}
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "lecture note",
+        "textbook",
+        "quick note",
+        "assignment note"
+      ],
+      "pluginOptions": {}
+    },
+    "demopdf": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {}
+    },
+    "fullpdf": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {}
+    },
+    "ratings": {
+      "type": "decimal",
+      "pluginOptions": {}
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "books"
+    },
+    "sem": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sem.sem",
+      "inversedBy": "books"
+    },
+    "institute": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::institute.institute",
+      "inversedBy": "books"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "books"
+    },
+    "coverpage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "books"
+    }
+  }
+}

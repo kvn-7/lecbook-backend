@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carouselimages",
+  "info": {
+    "singularName": "carouselimage",
+    "pluralName": "carouselimages",
+    "displayName": "carouselimage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
